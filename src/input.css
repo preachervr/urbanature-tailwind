@@ -161,6 +161,11 @@
   cursor: pointer;
 }
 
+label.required::after {
+  content: " *";
+  color: red;
+}
+
 
 
 @keyframes mainbutton {
