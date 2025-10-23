@@ -1,37 +1,65 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!doctype html>
+  <html lang="ro">
   <head>
-    <title>Contact</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
-    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbaNature - Contact</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <section class="wrapper">
-    <header>
-      <div class="game-logo">
-        <a href="#"><img class="cs2-logo" src="images/512x512.png" alt="Logo"></a>
-      </div>
-      <nav>
-        <a class="category" href="index.html">Acasă</a>
-        <a class="category" href="despre-noi.html">Despre noi</a>
-        <a class="category" href="portofoliu.html">Portofoliu</a>
-        <a class="category" href="servicii.html">Servicii</a>
-        <a class="category" href="contact.html">Contact</a>
-      </nav>
-    </header>
-      <main>
-
+  <body class="bg-main font-body">
+    <section class="grid grid-rows-[auto_1fr_auto] grid-cols-1">
+      <header class="grid-header w-full bg-primary text-header flex justify-between items-center px-6 md:px-10 lg:px-14 py-2 md:py-4 lg:py-6 relative">
+        <div class="w-18 md:w-20 lg:w-23">
+          <img src="images/logo.png" class="w-full">
+        </div>
+        <nav id="navLinks" class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 md:gap-20 lg:gap-28 text-xs sm:text-sm md:text-base lg:text-xl whitespace-nowrap">
+          <a href="index.html" class="underline-hover">Acasă</a>
+          <a href="despre-noi.html" class="underline-hover">Despre Noi</a>
+          <a href="portofoliu.html" class="underline-hover">Portofoliu</a>
+          <a href="servicii.html" class="underline-hover">Servicii</a>
+          <a href="contact.html" class="underline-hover">Contact</a>
+        </nav>
+        <div>
+          <button id="btnMenu" class="block md:hidden menu-btn text-base lg:text-xl z-30">MENU ☰</button>
+        </div>
+        <nav id="navMobile" class="hidden flex flex-col gap-8 mt-2 md:hidden absolute top-14 right-0 w-48 p-4 rounded-b shadow-lg bg-primary z-30">
+          <a href="index.html" class="underline-hover">Acasă</a>
+          <a href="despre-noi.html" class="underline-hover">Despre Noi</a>
+          <a href="portofoliu.html" class="underline-hover">Portofoliu</a>
+          <a href="servicii.html" class="underline-hover">Servicii</a>
+          <a href="contact.html" class="underline-hover">Contact</a>
+        </nav>
+      </header>
+      <main class="grid-main w-full z-20">
       </main>
-      <aside>
-        
-      </aside>
-      <footer>
-        
+      <footer class="grid-footer w-full">
+        <section class="w-full bg-primary text-header flex justify-between items-center px-6 md:px-10 lg:px-14 py-2 md:py-4 lg:py-6 relative">
+          <div class="text-sm md:text-base">
+            <h4 class="font-bold mb-2">Contact</h4>
+            <p>Strada Exemplu 123, Brașov</p>
+            <p>+40 724 037 113</p>
+            <p>info@urbanature.ro</p>
+          </div>
+          <div class="text-center text-sm md:text-base mt-6 self-center">
+            &copy; 2025 UrbaNature. Toate drepturile rezervate.
+          </div>
+        <div>
+            <h4 class="font-bold text-sm md:text-base mb-2">Social</h4>
+            <div class="flex">
+              <div class="w-9 md:w-10 lg:w-12">
+                <a href="#" class="hover:text-accent"><img src="images/facebook-logo.webp" alt="Facebook"></a>
+              </div>
+              <div class="w-9 md:w-10 lg:w-12">
+                <a href="#" class="hover:text-accent"><img src="images/instagram-png.webp" alt="Instagram"></a>
+              </div>
+          </div>
+        </section>
       </footer>
     </section>
+    <script src="js/index.js"></script>
   </body>
 </html>

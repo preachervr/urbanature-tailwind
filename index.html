@@ -1,78 +1,91 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!doctype html>
+  <html lang="ro">
   <head>
-    <title>UrbaNature - Acasă</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <title>UrbaNature - Acasă</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <section class="wrapper">
-    <header>
-      <div class="logo-container">
-        <a href="index.html"><img class="unlogo" src="images/logo.png" alt="UrbanNature Logo"></a>
-      </div>
-      <nav class="nav-links" id="navLinks">
-        <a class="category" href="index.html">Acasă</a>
-        <a class="category" href="despre-noi.html">Despre noi</a>
-        <a class="category" href="portofoliu.html">Portofoliu</a>
-        <a class="category" href="servicii.html">Servicii</a>
-        <a class="category" href="contact.html">Contact</a>
-      </nav>
-      <div class="menu-wrapper">
-          <button id="btnMenu" class="menu-btn">MENU ☰</button>
-      </div>
-    </header>
-      <main>
-        <section class="hero-slider">
-          <div class="slides">
-            <div class="slide active"><img src="images/slide1.jfif" alt="Slide 1"></div>
-            <div class="slide"><img src="images/slide2.jpg" alt="Slide 2"></div>
-            <div class="slide"><img src="images/slide3.jfif" alt="Slide 3"></div>
-            <div class="slide"><img src="images/slide4.jpg" alt="Slide 4"></div>
-            <div class="slide"><img src="images/slide5.jfif" alt="Slide 5"></div>
+  <body class="bg-main font-body">
+    <section class="grid grid-rows-[auto_1fr_auto] grid-cols-1">
+      <header class="grid-header w-full bg-primary text-header flex justify-between items-center px-6 md:px-10 lg:px-14 py-2 md:py-4 lg:py-6 relative">
+        <div class="w-18 md:w-20 lg:w-23">
+          <img src="images/logo.png" class="w-full">
+        </div>
+        <nav id="navLinks" class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 md:gap-20 lg:gap-28 text-xs sm:text-sm md:text-base lg:text-xl whitespace-nowrap">
+          <a href="index.html" class="underline-hover">Acasă</a>
+          <a href="despre-noi.html" class="underline-hover">Despre Noi</a>
+          <a href="portofoliu.html" class="underline-hover">Portofoliu</a>
+          <a href="servicii.html" class="underline-hover">Servicii</a>
+          <a href="contact.html" class="underline-hover">Contact</a>
+        </nav>
+        <div>
+          <button id="btnMenu" class="block md:hidden menu-btn text-base lg:text-xl z-30">MENU ☰</button>
+        </div>
+        <nav id="navMobile" class="hidden flex flex-col gap-8 mt-2 md:hidden absolute top-14 right-0 w-48 p-4 rounded-b shadow-lg bg-primary z-30">
+          <a href="index.html" class="underline-hover">Acasă</a>
+          <a href="despre-noi.html" class="underline-hover">Despre Noi</a>
+          <a href="portofoliu.html" class="underline-hover">Portofoliu</a>
+          <a href="servicii.html" class="underline-hover">Servicii</a>
+          <a href="contact.html" class="underline-hover">Contact</a>
+        </nav>
+      </header>
+      <main class="grid-main w-full z-20">
+        <section class="relative w-full h-[300px] md:h-[450px] lg:h-[600px] overflow-hidden group">
+          <div class="absolute inset-0 opacity-100 transition-opacity duration-700" data-index="0">
+            <img src="images/slide1.jfif" alt="Slide 1" class="w-full h-full object-cover">
           </div>
-          <button class="prev">&#10094;</button>
-          <button class="next">&#10095;</button>
-          <div class="dots">
-            <span class="dot active" data-index="0"></span>
-            <span class="dot" data-index="1"></span>
-            <span class="dot" data-index="2"></span>
-            <span class="dot" data-index="3"></span>
-            <span class="dot" data-index="4"></span>
+          <div class="absolute inset-0 opacity-0 transition-opacity duration-700" data-index="1">
+            <img src="images/slide2.jpg" alt="Slide 2" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute inset-0 opacity-0 transition-opacity duration-700" data-index="2">
+            <img src="images/slide3.jfif" alt="Slide 3" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute inset-0 opacity-0 transition-opacity duration-700" data-index="3">
+            <img src="images/slide4.jpg" alt="Slide 4" class="w-full h-full object-cover">
+          </div>
+          <div class="absolute inset-0 opacity-0 transition-opacity duration-700" data-index="4">
+            <img src="images/slide5.jfif" alt="Slide 5" class="w-full h-full object-cover">
+          </div>
+          <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white text-3xl px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            &#10094;</button>
+          <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white text-3xl px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer">
+            &#10095;</button>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            <span class="dot w-3 h-3 rounded-full bg-white/80 cursor-pointer" data-dot="0"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 cursor-pointer" data-dot="1"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 cursor-pointer" data-dot="2"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 cursor-pointer" data-dot="3"></span>
+            <span class="dot w-3 h-3 rounded-full bg-white/40 cursor-pointer" data-dot="4"></span>
           </div>
         </section>
-        <div class="main-page-wrapper">
-          <div class="section1">
-            <h1>Amenajări complete de spații verzi în Brașov — de la design la întreținere</h1>
-            <p>UrbaNature oferă soluții one-stop premium pentru grădini rezidențiale, spații publice și curți private: design peisagistic, montare gazon, irigații, toaletare arbori și mentenanță profesională.</p>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
+        <section class="relative flex flex-col md:flex-row mx-auto max-w-6xl md:max-w-7xl py-4 md:py-10 gap-8">
+          <div class="flex flex-col gap-3 mx-6 md:mx-0 md:gap-4 md:sticky top-20 self-start md:w-1/3">
+            <h1 class="main-page-h1 text-primary">Amenajări complete de spații verzi în Brașov — de la design la întreținere</h1>
+            <p class="text-base main-color">UrbaNature oferă soluții one-stop premium pentru grădini rezidențiale, spații publice și curți private: design peisagistic, montare gazon, irigații, toaletare arbori și mentenanță profesională.</p>
+            <a href="" class="self-center"><button class="cursor-pointer px-12 py-6 bg-primary main-color font-bold rounded-lg bg-accent offer-btn">Solicită ofertă</button></a>
           </div>
-          <div class="sections">
-            <div class="main-image-container">
-              <img src="images/main-image.jpg" alt="Main Image">
-            </div>
-            <div class="row-2-3">
-              <div class="section2">
-                <h1>Cine suntem?</h1>
-                <p>UrbaNature este o firmă specializată în amenajări și întreținere spații verzi în județul Brașov.
-                Lucrăm cu pasiune, precizie și grijă pentru detalii, oferind servicii complete — de la proiectare 3D și selecția plantelor până la montajul sistemelor de irigații și întreținerea periodică a grădinii.
-                Ne adresăm celor care apreciază calitatea, eleganța și armonia naturală.
-                </p>
-                <ul>Puncte cheie:
+          <div class="flex flex-col md:w-2/3">
+            <img class="w-full h-full" src="images/main-image.jpg">
+            <div class="flex w-full gap-5 md:gap-10">
+              <div class="flex flex-col gap-3 md:gap-4 w-1/2 pt-6 md:pt-12 pl-4 md:pl-8 pb-4">
+                <h1 class="text-primary main-page-h1">Cine suntem?</h1>
+                <p class="text-base main-color">UrbaNature este o firmă specializată în amenajări și întreținere spații verzi în județul Brașov. 
+                Lucrăm cu pasiune, precizie și grijă pentru detalii, oferind servicii complete — de la proiectare 3D și selecția plantelor până la montajul sistemelor de irigații și întreținerea periodică a grădinii. 
+                Ne adresăm celor care apreciază calitatea, eleganța și armonia naturală.</p>
+                <ul class="list-disc p-4 main-color">Puncte cheie:
                   <li>Expertiză profesională și consultanță personalizată</li>
                   <li>Execuție cu echipamente moderne</li>
                   <li>Pachete de mentenanță flexibile</li>
                   <li>Garanție pentru lucrări și plante</li>
                 </ul>
               </div>
-              <div class="section3">
-                <h1>De ce clienții aleg UrbanNature</h1>
+              <div class="flex flex-col gap-4 w-1/2 bg-primary secondary-color pt-6 md:pt-12 px-10">
+                <h1 class="main-page-h1">De ce clienții aleg UrbanNature</h1>
                 <p>One-stop-shop: coordonăm toate etapele proiectului — design, lucrări, irigații și întreținere.</p>
                 <p>Profesionalism premium: echipă calificată, materiale certificate, execuție la standarde înalte.</p>
                 <p>Consultanță personalizată: soluții adaptate fiecărei proprietăți și bugetului clientului.</p>
@@ -80,43 +93,61 @@
               </div>
             </div>
           </div>
-        </div>
-        <section class="services">
-            <div class="services-div">
-              <h3>Design peisagistic & planuri 3D</h3>
-              <a href="servicii.html#peisagistic-design"><button class="btn-services">Mai mult</button></a>
+        </section>
+          <section class="flex flex-col mx-20 md:mx-auto md:px-0 md:flex-row shadow-2xl p-4 md:max-w-screen-xl mb-10 md:mb-24 gap-2">
+            <div class="flex flex-col flex-1 justify-center gap-4 border-b md:border-b-0 md:border-r border-[var(--primary-color)] pb-4 md:pb-0">
+              <h3 class="text-center main-page-h3 text-primary">Design peisagistic & planuri 3D</h3>
+              <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
             </div>
-            <div class="services-div">
-              <h3>Însămânțare și montare gazon rulou</h3>
-              <a href="servicii.html#lawn-installation"><button class="btn-services">Mai mult</button></a>
+            <div class="flex flex-col flex-1 justify-center gap-4 border-b md:border-b-0 md:border-r border-[var(--primary-color)] pb-4 md:pb-0">
+              <h3 class="text-center main-page-h3 text-primary">Însămânțare și montare gazon rulou</h3>
+            <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
             </div>
-            <div class="services-div">
-              <h3>Sisteme de irigații automatizate</h3>
-              <a href="servicii.html#irigation-system"><button class="btn-services">Mai mult</button></a>
+            <div class="flex flex-col flex-1 justify-center gap-4 border-b md:border-b-0 md:border-r border-[var(--primary-color)] pb-4 md:pb-0">
+              <h3 class="text-center main-page-h3 text-primary">Sisteme de irigații automatizate</h3>
+              <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
             </div>
-            <div class="services-div">
-              <h3>Toaletare pomi și arbori</h3>
-              <a href="servicii.html#trees-shrubs"><button class="btn-services">Mai mult</button></a>
+            <div class="flex flex-col flex-1 justify-center gap-4 border-b md:border-b-0 md:border-r border-[var(--primary-color)] pb-4 md:pb-0">
+              <h3 class="text-center main-page-h3 text-primary">Toaletare pomi și arbori</h3>
+              <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
             </div>
-            <div class="services-div">
-              <h3>Plantări ornamentale și horticole</h3>
-              <a href="servicii.html#horticultural-planting"><button class="btn-services">Mai mult</button></a>
+            <div class="flex flex-col flex-1 justify-center gap-4 border-b md:border-b-0 md:border-r border-[var(--primary-color)] pb-4 md:pb-0">
+              <h3 class="text-center main-page-h3 text-primary">Plantări ornamentale și horticole</h3>
+              <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
             </div>
-            <div class="services-div">
-              <h3>Mentenanță periodică (abonamente)</h3>
-              <a href="servicii.html#subscriptions"><button class="btn-services">Mai mult</button></a>
+            <div class="flex flex-col flex-1 justify-center gap-4 border-b md:border-b-0 md:border-r border-[var(--primary-color)] pb-4 md:pb-0">
+              <h3 class="text-center main-page-h3 text-primary">Mentenanță periodică (abonamente)</h3>
+              <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
             </div>
-            <div class="services-div">
-              <h3>Amenajare zone outdoor de socializare (foc de tabără, pergole, mobilier etc.)</h3>
-              <a href="servicii.html#outdoor"><button class="btn-services">Mai mult</button></a>
-            </div>
-          </section>
+              <div class="flex flex-col justify-center flex-1 gap-4">
+                <h3 class="text-center main-page-h3 text-primary">Amenajare zone outdoor de socializare (foc de tabără, pergole, mobilier etc.)</h3>
+                <a href="" class="self-center"><button class="cursor-pointer px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">Mai mult</button></a>
+              </div>
+            </section>
       </main>
-      <aside>
-        
-      </aside>
-      <footer>
-        
+      <footer class="grid-footer w-full">
+        <section class="w-full bg-primary text-header flex justify-between items-center px-6 md:px-10 lg:px-14 py-2 md:py-4 lg:py-6 relative">
+          <div class="text-sm md:text-base">
+            <h4 class="font-bold mb-2">Contact</h4>
+            <p>Strada Exemplu 123, Brașov</p>
+            <p>+40 724 037 113</p>
+            <p>info@urbanature.ro</p>
+          </div>
+          <div class="text-center text-sm md:text-base mt-6 self-center">
+            &copy; 2025 UrbaNature. Toate drepturile rezervate.
+          </div>
+        <div>
+            <h4 class="font-bold text-sm md:text-base mb-2">Social</h4>
+            <div class="flex">
+              <div class="w-9 md:w-10 lg:w-12">
+                <a href="#" class="hover:text-accent"><img src="images/facebook-logo.webp" alt="Facebook"></a>
+              </div>
+              <div class="w-9 md:w-10 lg:w-12">
+                <a href="#" class="hover:text-accent"><img src="images/instagram-png.webp" alt="Instagram"></a>
+              </div>
+            </div>
+          </div>
+        </section>
       </footer>
     </section>
     <script src="js/index.js"></script>

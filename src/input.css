@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+:root {
+  --primary-color: #2E7D32;
+  --accent-color: #A5D6A7;
+  --main-background: #F1F8E9;
+  --header-text-color: #F1F8E9;
+  --main-text: #2f2f2f;
+  --hover-highlight: #C8E6C9;
+
+  --header-font: "Montserrat", sans-serif;
+  --body-font: "Open Sans", sans-serif;
+}
+
+.font-header {
+  font-family: var(--header-font);
+}
+
+.font-body {
+  font-family: var(--body-font);
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-main {
+  background-color: var(--main-background);
+}
+
+.main-color {
+  color: var(--main-text);
+}
+
+.secondary-color {
+  color: var(--header-text-color);
+}
+
+.text-header {
+  color: var(--header-text-color);
+  font-family: var(--header-font);
+  font-weight: 300;
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.hover-text-accent:hover {
+  color: var(--accent-color);
+}
+
+.underline-hover {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.underline-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--hover-highlight);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.underline-hover:hover {
+  color: var(--hover-highlight);
+  text-shadow: 0 0 2px var(--header-text-color);
+}
+
+.underline-hover:hover::after {
+  transform: scaleX(1);
+}
+
+.header-shadow {
+  text-shadow: 0 0 2px var(--header-text-color);
+  color: var(--hover-highlight);
+}
+
+.menu-btn {
+  color: var(--header-text-color);
+  cursor: pointer;
+  text-shadow: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 400;
+}
+
+.menu-btn:hover {
+  color: var(--hover-highlight);
+  text-shadow: 0 0 2px var(--header-text-color);
+}
+
+.offer-btn {
+  background-color: var(--accent-color);
+}
+
+.offer-btn:hover {
+  animation: mainbutton 2s ease-in-out infinite;
+}
+
+.main-page-h1 {
+  font-size: clamp(1.1rem, 1.2vw, 1.8rem);
+  font-weight: 700;
+}
+
+.main-page-h3 {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  font-weight: 700;
+}
+
+.before-after-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.clip-image {
+  clip-path: inset(0 50% 0 0);
+  -webkit-clip-path: inset(0 50% 0 0);
+  transition: clip-path 0.1s ease-out;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+.range-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+
+
+@keyframes mainbutton {
+  0% { 
+    transform: scale(1);
+    box-shadow: 0 0 5px var(--hover-highlight), 0 0 10px var(--hover-highlight), 0 0 15px var(--hover-highlight);
+   }
+  50% {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px var(--hover-highlight), 0 0 15px var(--hover-highlight), 0 0 20px var(--hover-highlight);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px var(--hover-highlight), 0 0 10px var(--hover-highlight), 0 0 15px var(--hover-highlight);
+  }
+}
+
+
+

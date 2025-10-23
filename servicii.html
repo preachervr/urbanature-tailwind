@@ -1,146 +1,186 @@
-<!DOCTYPE html>
-<html lang="ro">
+<!doctype html>
+  <html lang="ro">
   <head>
-    <title>UrbaNature - Servicii</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/servicii.css">
+    <title>UrbaNature - Servicii</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <section class="wrapper">
-    <header>
-      <div class="logo-container">
-        <a href="index.html"><img class="unlogo" src="images/logo.png" alt="UrbanNature Logo"></a>
-      </div>
-      <nav class="nav-links" id="navLinks">
-        <a class="category" href="index.html">Acasă</a>
-        <a class="category" href="despre-noi.html">Despre noi</a>
-        <a class="category" href="portofoliu.html">Portofoliu</a>
-        <a class="category" href="servicii.html">Servicii</a>
-        <a class="category" href="contact.html">Contact</a>
-      </nav>
-      <div class="menu-wrapper">
-          <button id="btnMenu" class="menu-btn">MENU ☰</button>
-      </div>
-    </header>
-      <main>
-        <div class="services-wrapper">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Design Peisagistic & Planuri 3D">
+  <body class="bg-main font-body">
+    <section class="grid grid-rows-[auto_1fr_auto] grid-cols-1">
+      <header class="grid-header w-full bg-primary text-header flex justify-between items-center px-6 md:px-10 lg:px-14 py-2 md:py-4 lg:py-6 relative">
+        <div class="w-18 md:w-20 lg:w-23">
+          <img src="images/logo.png" class="w-full">
+        </div>
+        <nav id="navLinks" class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 gap-10 md:gap-20 lg:gap-28 text-xs sm:text-sm md:text-base lg:text-xl whitespace-nowrap">
+          <a href="index.html" class="underline-hover">Acasă</a>
+          <a href="despre-noi.html" class="underline-hover">Despre Noi</a>
+          <a href="portofoliu.html" class="underline-hover">Portofoliu</a>
+          <a href="servicii.html" class="underline-hover">Servicii</a>
+          <a href="contact.html" class="underline-hover">Contact</a>
+        </nav>
+        <div>
+          <button id="btnMenu" class="block md:hidden menu-btn text-base lg:text-xl z-30">MENU ☰</button>
+        </div>
+        <nav id="navMobile" class="hidden flex flex-col gap-8 mt-2 md:hidden absolute top-14 right-0 w-48 p-4 rounded-b shadow-lg bg-primary z-30">
+          <a href="index.html" class="underline-hover">Acasă</a>
+          <a href="despre-noi.html" class="underline-hover">Despre Noi</a>
+          <a href="portofoliu.html" class="underline-hover">Portofoliu</a>
+          <a href="servicii.html" class="underline-hover">Servicii</a>
+          <a href="contact.html" class="underline-hover">Contact</a>
+        </nav>
+      </header>
+      <main class="grid-main w-full z-20 mx-auto">
+        <div class="flex flex-col md:max-w-screen-xl mx-auto">
+          <section class="relative w-full flex flex-col md:flex-row items-center py-16 gap-4 md:gap-0">
+          <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+            <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+            <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+            <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2/3 range-slider z-20">
           </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="peisagistic-design">Design Peisagistic & Planuri 3D</h1>
-              <p>Proiectăm grădini și spații verzi în funcție de stilul arhitectural al locuinței și preferințele proprietarului.<br>
+            <div class="md:w-1/2 flex flex-col gap-4 text-center px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Design Peisagistic & Planuri 3D</h1>
+              <p class="main-color text-sm md:text-base">Proiectăm grădini și spații verzi în funcție de stilul arhitectural al locuinței și preferințele proprietarului.<br>
               Folosim randări 3D pentru a vizualiza rezultatul final înainte de execuție.</p>
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
-        </div>
-        <div class="services-reversed">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Însămânțare și montare gazon rulou">
-          </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="lawn-installation">Însămânțare și montare gazon rulou</h1>
-              <p>Executăm pregătirea completă a terenului: nivelare, afânare, corectarea pH-ului, aplicare strat de sol fertil și montaj de gazon rulou premium.<br>
-              Lucrăm doar cu soiuri certificate, adaptate climatului din Brașov (Festuca arundinacea, Lolium perenne etc.)..</p>
+            </section>
+          <section class="relative w-full flex flex-col md:flex-row-reverse items-center py-16 -mt-24 md:-mt-32 mb-8 md:mb-0 gap-4 md:gap-0">
+            <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+              <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+              <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+              <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2/3 range-slider z-20">
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
-        </div>
-        <div class="services-wrapper">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Sisteme de irigații automatizate">
-          </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="irigation-system">Sisteme de irigații automatizate</h1>
-              <p>Proiectăm și montăm sisteme eficiente, cu aspersoare Hunter / Rain Bird, senzori de umiditate și control Wi-Fi.<br>
+            <div class="md:w-1/2 flex flex-col gap-4 z-20 text-center px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Însămânțare și montare gazon rulou</h1>
+              <p class="main-color text-sm md:text-base">Executăm pregătirea completă a terenului: nivelare, afânare, corectarea pH-ului, aplicare strat de sol fertil și montaj de gazon rulou premium.<br>
+              Lucrăm doar cu soiuri certificate, adaptate climatului din Brașov (Festuca arundinacea, Lolium perenne etc.).</p>
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
+            </div>
+          </section>
+          <section class="relative w-full flex flex-col md:flex-row items-center py-16 -mt-32 gap-4 md:gap-0">
+            <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+              <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+              <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+              <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2/3 range-slider z-20">
+            </div>
+            <div class="md:w-1/2 flex flex-col gap-4 text-center px-6 md:px-12 lg:px-16 px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Sisteme de irigații automatizate</h1>
+              <p class="main-color text-sm md:text-base">Proiectăm și montăm sisteme eficiente, cu aspersoare Hunter / Rain Bird, senzori de umiditate și control Wi-Fi.<br>
               Reducerea consumului de apă cu până la 40% prin distribuție uniformă și programare inteligentă.</p>
-              
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
-        </div>
-        <div class="services-reversed">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Sisteme de irigații automatizate">
-          </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="trees-shrubs">Toaletare pomi și arbori</h1>
-              <p>Servicii sigure de tăiere de întreținere, formare sau regenerare pentru pomi fructiferi și arbori ornamentali.<br>
+          </section>
+          <section class="relative w-full flex flex-col md:flex-row-reverse items-center py-16 -mt-24 md:-mt-32 mb-8 md:mb-0 gap-4 md:gap-0">
+            <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+              <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+              <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+              <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2/3 range-slider z-20">
+            </div>
+            <div class="md:w-1/2 flex flex-col gap-4 z-20 text-center px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Toaletare pomi și arbori</h1>
+              <p class="main-color text-sm md:text-base">Servicii sigure de tăiere de întreținere, formare sau regenerare pentru pomi fructiferi și arbori ornamentali.<br>
               Lucrăm cu echipament profesional de alpinism utilitar și respectăm normele de protecție a plantelor.</p>
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
-        </div>
-        <div class="services-wrapper">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Plantări ornamentale și horticole">
-          </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="horticultural-planting">Plantări ornamentale și horticole</h1>
-              <p>Realizăm plantări sezoniere de arbori, arbuști și flori decorative, adaptate microclimatului local.<br>
+          </section>
+          <section class="relative w-full flex flex-col md:flex-row items-center py-16 -mt-32 gap-4 md:gap-0">
+            <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+              <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+              <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+              <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2/3 range-slider z-20">
+            </div>
+            <div class="md:w-1/2 flex flex-col gap-4 text-center px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Plantări ornamentale și horticole</h1>
+              <p class="main-color text-sm md:text-base">Realizăm plantări sezoniere de arbori, arbuști și flori decorative, adaptate microclimatului local.<br>
               Oferim consultanță pentru alegerea speciilor și garanție pentru prinderea plantelor.</p>
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
-        </div>
-        <div class="services-reversed">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Mentenanță și abonamente">
-          </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="subscriptions">Mentenanță și abonamente</h1>
-              <p>Întreținere periodică a spațiilor verzi: tunderi regulate, fertilizări, tratamente fitosanitare, curățare frunze și igienizare de sezon.<br>
+          </section>
+          <section class="relative w-full flex flex-col md:flex-row-reverse items-center py-16 -mt-24 md:-mt-32 mb-8 md:mb-0 gap-4 md:gap-0">
+            <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+              <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+              <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+              <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-2/3 range-slider z-20">
+            </div>
+            <div class="md:w-1/2 flex flex-col gap-4 z-20 text-center px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Mentenanță și abonamente</h1>
+              <p class="main-color text-sm md:text-base">Întreținere periodică a spațiilor verzi: tunderi regulate, fertilizări, tratamente fitosanitare, curățare frunze și igienizare de sezon.<br>
               Abonamente lunare / sezoniere pentru persoane fizice și juridice.</p>
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
-        </div>
-        <div class="services-wrapper">
-          <div class="services-images-container">
-            <img src="https://picsum.photos/800/600" alt="Zone outdoor pentru socializare">
-          </div>
-          <div class="services-info">
-            <div class="text-wrapper">
-              <h1 id="outdoor">Zone outdoor pentru socializare</h1>
-              <p>Amenajăm spații funcționale pentru relaxare: zone cu foc de tabără, pergole, bănci, alei pavate și iluminat ambiental.<br>
+          </section>
+          <section class="relative w-full flex flex-col md:flex-row items-center py-16 -mt-32 gap-4 md:gap-0">
+            <div class="relative h-96 md:h-[500px] overflow-hidden shadow-lg before-after-container w-[500px] md:w-1/2">
+              <img src="https://picsum.photos/id/1015/800/600" alt="Before" class="absolute top-0 left-0 w-full h-full object-cover">
+              <img src="https://picsum.photos/id/1016/800/600" alt="After" class="absolute top-0 left-0 w-full h-full object-cover clip-image">
+              <input type="range" min="0" max="100" value="50" class="absolute bottom-4 left-1/2 -translate-x-1/2 w-1/2 range-slider z-20">
+            </div>
+            <div class="md:w-1/2 flex flex-col gap-4 text-center px-6 md:px-12 lg:px-16">
+              <h1 class="main-page-h1 text-primary">Zone outdoor pentru socializare</h1>
+              <p class="main-color text-sm md:text-base">Amenajăm spații funcționale pentru relaxare: zone cu foc de tabără, pergole, bănci, alei pavate și iluminat ambiental.<br>
               Perfecte pentru proprietăți private, pensiuni și cabane din zona Brașovului.</p>
+              <div class="flex justify-center">
+                <a href="https://egtl.ro/ro" target="_blank" rel="noopener noreferrer" class="inline-block px-6 py-3 main-color font-bold rounded-lg bg-accent offer-btn">
+                Solicită ofertă
+                </a>
+              </div>
             </div>
-            <a href="https://egtl.ro/ro" class="btn-offer-container">
-              <button class="btn-offer" target="_blank" src="https://egtl.ro/ro">Solicită ofertă</button>
-            </a>
-          </div>
+          </section>
         </div>
       </main>
-      <aside>
-        
-      </aside>
-      <footer>
-        
+      <footer class="grid-footer w-full">
+        <section class="w-full bg-primary text-header flex justify-between items-center px-6 md:px-10 lg:px-14 py-2 md:py-4 lg:py-6 relative">
+          <div class="text-sm md:text-base">
+            <h4 class="font-bold mb-2">Contact</h4>
+            <p>Strada Exemplu 123, Brașov</p>
+            <p>+40 724 037 113</p>
+            <p>info@urbanature.ro</p>
+          </div>
+          <div class="text-center text-sm md:text-base mt-6 self-center">
+            &copy; 2025 UrbaNature. Toate drepturile rezervate.
+          </div>
+        <div>
+            <h4 class="font-bold text-sm md:text-base mb-2">Social</h4>
+            <div class="flex">
+              <div class="w-9 md:w-10 lg:w-12">
+                <a href="#" class="hover:text-accent"><img src="images/facebook-logo.webp" alt="Facebook"></a>
+              </div>
+              <div class="w-9 md:w-10 lg:w-12">
+                <a href="#" class="hover:text-accent"><img src="images/instagram-png.webp" alt="Instagram"></a>
+              </div>
+          </div>
+        </section>
       </footer>
     </section>
-    <script src="js/index.js"></script> 
+    <script src="js/servicii.js"></script>
   </body>
 </html>
