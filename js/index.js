@@ -71,18 +71,30 @@ prevBtn.addEventListener("click", () => {
   resetInterval();
 });
 
-    document.querySelectorAll('.before-after-container').forEach(container => {
-      const slider = container.querySelector('.range-slider');
-      const clipImage = container.querySelector('.clip-image');
+// Theme Switcher
 
-      const initialValue = slider.value;
-      clipImage.style.clipPath = `inset(0 ${100 - initialValue}% 0 0)`;
-      clipImage.style.webkitClipPath = `inset(0 ${100 - initialValue}% 0 0)`;
+const themeButtons = document.querySelectorAll('.themeToggle');
+const html = document.documentElement;
 
-      slider.addEventListener('input', (e) => {
-        const value = e.target.value;
-        clipImage.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
-        clipImage.style.webkitClipPath = `inset(0 ${100 - value}% 0 0)`;
-      });
-    });
+function updateDots(isDark) {
+  themeButtons.forEach(btn => {
+    const themeDot = btn.querySelector('.themeDot');
+    themeDot.classList.toggle('left-1', !isDark);
+    themeDot.classList.toggle('right-1', isDark);
+  });
+}
+
+let isDark = localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+html.classList.toggle('dark', isDark);
+updateDots(isDark);
+
+themeButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    isDark = !html.classList.contains('dark');
+    html.classList.toggle('dark');
+    localStorage.theme = isDark ? 'dark' : 'light';
+    updateDots(isDark);
+  });
+});
+
 

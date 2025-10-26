@@ -36,6 +36,14 @@
   background-color: var(--main-background);
 }
 
+.dark .bg-main {
+  background-color: var(--main-text);
+}
+
+.dark .main-color {
+ color: var(--main-background);
+}
+
 .main-color {
   color: var(--main-text);
 }
@@ -49,6 +57,7 @@
   font-family: var(--header-font);
   font-weight: 300;
 }
+
 
 .bg-accent {
   background-color: var(--accent-color);

@@ -19,19 +19,6 @@ links.forEach(link => {
 })
 
 
-// Before-After Slider
-document.querySelectorAll('.before-after-container').forEach(container => {
-  const slider = container.querySelector('.range-slider');
-  const clipImage = container.querySelector('.clip-image');
-  const initialValue = slider.value;
-  clipImage.style.clipPath = `inset(0 ${100 - initialValue}% 0 0)`;
-  slider.addEventListener('input', e => {
-    const value = e.target.value;
-    clipImage.style.clipPath = `inset(0 ${100 - value}% 0 0)`;
-  });
-});
-
-
 // Theme Switcher
 
 const themeButtons = document.querySelectorAll('.themeToggle');
@@ -57,3 +44,5 @@ themeButtons.forEach(btn => {
     updateDots(isDark);
   });
 });
+
+
