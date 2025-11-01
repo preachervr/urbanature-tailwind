@@ -1,0 +1,6 @@
+Modificare light mode dark mode
+Button sa duca in susul paginii
+Acasă - modificat text
+Despre noi - modificam textul
+Servicii - renuntam la poze, titlu in locul pozelor, deasupra titlului punem iconiță mai mare
+Footer - mai mic
