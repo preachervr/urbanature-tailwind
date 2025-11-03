@@ -98,3 +98,36 @@ themeButtons.forEach(btn => {
 });
 
 
+// Back To Top Button
+
+const backToTopButton = document.getElementById("backToTop");
+const footer = document.getElementById("footer");
+
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 300) {
+    backToTopButton.classList.remove("opacity-0");
+    backToTopButton.classList.add("opacity-100");
+  } else {
+    backToTopButton.classList.add("opacity-0");
+    backToTopButton.classList.remove("opacity-100");
+  }
+  const footerRect = footer.getBoundingClientRect();
+  const overlap = window.innerHeight - footerRect.top;
+
+  if (overlap > 0 ) {
+    backToTopButton.style.bottom = `${overlap +24}px`
+  } else {
+    backToTopButton.style.bottom = "24px";
+  }
+});
+
+function backToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  })
+};
+
+backToTopButton.addEventListener("click", backToTop);
+
+

@@ -61,3 +61,14 @@ document.querySelectorAll('.before-after-container').forEach(container => {
 });
 
 
+// Overlay On Mobile
+
+const cards = document.querySelectorAll('.block.group');
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const overlay = card.querySelector('.absolute.inset-0');
+    overlay.classList.toggle('opacity-100');
+  });
+});
+
